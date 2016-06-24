@@ -1,5 +1,5 @@
 {{ range $host, $containers := groupByMulti $ "Env.VIRTUAL_HOST" "," }}
-{{ $host }} {
+http://{{ $host }} {
   {{ range $index, $value := $containers }}
     {{ $basicauth := $value.Env.BASIC_AUTH }}
     {{ $path := coalesce $value.Env.VIRTUAL_PATH "/" }}
