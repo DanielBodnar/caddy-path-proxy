@@ -3,6 +3,7 @@ MAINTAINER BlackGlory <woshenmedoubuzhidao@blackglory.me>
 
 RUN apk update && apk upgrade && \
     apk add curl && \
+    apk add --update bash && \
     rm -rf /var/cache/apk/*
 
 RUN mkdir -p /tmp/caddy \
