@@ -10,7 +10,7 @@ Start any containers you want proxied with env vars `VIRTUAL_PATH=/some/path` an
 
 If you want the container protected by HTTP Basic Authentication add a `BASIC_AUTH` env var with the path to protect (i.e. `/`), username, and password:
 ```sh
-    $ docker run -e VIRTUAL_PATH=/foo -e VIRTUAL_HOST=foo.bar.com -e BASIC_AUTH="/ myname mysecrect" ...
+    $ docker run -e VIRTUAL_PATH=/foo -e VIRTUAL_HOST=foo.bar.com -e BASIC_AUTH="/ myname mysecret" ...
 ```
 
 Then to run it:
